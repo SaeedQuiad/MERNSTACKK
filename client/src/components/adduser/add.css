@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.addUser {
+  position: absolute;
+  top: 50px; /* Adjust this value as per your margin requirement */
+  left: 50%; /* Aligns the left edge of .addUser to the horizontal center */
+  transform: translateX(-50%); /* Centers .addUser horizontally */
+  width: 35%;
+  background-color: white;
+  padding: 20px; /* Example padding */
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
+  border-radius: 5px;
+  margin: 50px auto;
+}
+
+.addUserForm .inputGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.addUserForm .inputGroup label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.addUserForm .inputGroup input {
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.addUserForm .inputGroup input:focus {
+  border-color: #007bff;
+}
+
+.addUserForm .inputGroup button {
+  border: 0;
+  outline: none;
+  background-color: #6f42c1;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.addUserForm .inputGroup button:hover {
+  background-color: #5a3ac5;
+}
+
+.addUser h3 {
+  text-align: center;
+  margin-top: 10px;
+  color: #343a40;
+}
+
+/* Notification Message Styling */
+.notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensure messages appear above other content */
+  animation: slide-in 0.5s forwards;
+}
+
+.notification {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.success-notification {
+  background-color: #28a745;
+  color: white;
+}
+
+.error-notification {
+  background-color: #dc3545;
+  color: white;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
